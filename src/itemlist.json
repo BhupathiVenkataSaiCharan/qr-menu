@@ -1,0 +1,177 @@
+[
+  {
+    "Name": "Chicken pizza",
+    "Category": "Pizza",
+    "Type": "non-veg",
+    "Price": 376,
+    "id": "1"
+  },
+  {
+    "Name": "Paneer Cheese Pizza",
+    "Category": "Pizza",
+    "Type": "veg",
+    "Price": 350,
+    "id": "2"
+  },
+  {
+    "Name": "Veg Cheese Pizza",
+    "Category": "Pizza",
+    "Type": "veg",
+    "Price": 260,
+    "id": "3"
+  },
+  {
+    "Name": "Chicken Cheese Pizza",
+    "Category": "Pizza",
+    "Type": "non-veg",
+    "Price": 440,
+    "id": "4"
+  },
+  {
+    "Name": "Fruit Bread",
+    "Category": "Bread",
+    "Type": "veg",
+    "Price": 36,
+    "id": "5"
+  },
+  {
+    "Name": "Milk Bread",
+    "Category": "Bread",
+    "Type": "veg",
+    "Price": 23,
+    "id": "6"
+  },
+  {
+    "Name": "Brown Bread",
+    "Category": "Bread",
+    "Type": "veg",
+    "Price": 45,
+    "id": "7"
+  },
+  {
+    "Name": "Wheat Bread",
+    "Category": "Bread",
+    "Type": "veg",
+    "Price": 30,
+    "id": "8"
+  },
+  {
+    "Name": "Oreo Milkshake",
+    "Category": "Shakes",
+    "Type": "veg",
+    "Price": 130,
+    "id": "9"
+  },
+  {
+    "Name": "Nutella Fruit shake",
+    "Category": "Shakes",
+    "Type": "veg",
+    "Price": 110,
+    "id": "10"
+  },
+  {
+    "Name": "Choco Chip Milkshake",
+    "Category": "Shakes",
+    "Type": "veg",
+    "Price": 140,
+    "id": "11"
+  },
+  {
+    "Name": "Banana Milkshake",
+    "Category": "Shakes",
+    "Type": "veg",
+    "Price": 120,
+    "id": "12"
+  },
+  {
+    "Name": "Choco Chip IceCream",
+    "Category": "Ice-Cream",
+    "Type": "veg",
+    "Price": 160,
+    "id": "13"
+  },
+  {
+    "Name": "Pista IceCream",
+    "Category": "Ice-Cream",
+    "Type": "veg",
+    "Price": 140,
+    "id": "14"
+  },
+  {
+    "Name": "Vanilla IceCream",
+    "Category": "Ice-Cream's",
+    "Type": "veg",
+    "Price": 110,
+    "id": "15"
+  },
+  {
+    "Name": "Mixed Fruit IceCream",
+    "Category": "Ice-Cream's",
+    "Type": "veg",
+    "Price": 140,
+    "id": "16"
+  },
+  {
+    "Name": "Chocolate Cake",
+    "Category": "Cakes",
+    "Type": "veg",
+    "Price": "360/kg",
+    "id": "17"
+  },
+  {
+    "Name": "Vanilla Cake",
+    "Category": "Cakes",
+    "Type": "veg",
+    "Price": "280/kg",
+    "id": "18"
+  },
+  {
+    "Name": "Nutella Choco Chip Cake",
+    "Category": "Cakes",
+    "Type": "veg",
+    "Price": "450/kg",
+    "id": "19"
+  },
+  {
+    "Name": "Plum Cake",
+    "Category": "Cakes",
+    "Type": "veg",
+    "Price": "200/kg",
+    "id": "20"
+  },
+  {
+    "Name": "Watermelon Juice",
+    "Category": "Juices",
+    "Type": "veg",
+    "Price": 50,
+    "id": "21"
+  },
+  {
+    "Name": "Mango Juice",
+    "Category": "Juices",
+    "Type": "veg",
+    "Price": 50,
+    "id": "22"
+  },
+  {
+    "Name": "Badam Juice",
+    "Category": "Juices",
+    "Type": "veg",
+    "Price": 60,
+    "id": "23"
+  },
+  {
+    "Name": "Banana Juice",
+    "Category": "Juices",
+    "Type": "veg",
+    "Price": 40,
+    "id": "24"
+  },
+  {
+    "Name": "Orange Juice",
+    "Category": "Juices",
+    "Type": "veg",
+    "Price": 45,
+    "id": "25"
+  }
+]
