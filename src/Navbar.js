@@ -1,6 +1,7 @@
 import React from 'react';
 
-import Menu from "./Menu";
+import DMenu from "./DMenu";
+import Menu from './Menu';
 
 const Navbar = () => {
   return (
@@ -17,6 +18,7 @@ const Navbar = () => {
                 </ul>
             </div>
         </nav>
+        {/* <DMenu/> */}
         <Menu/>
     </div>
 

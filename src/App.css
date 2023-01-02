@@ -155,6 +155,7 @@ body {
 
   .content{
     display: none;
+    /* flex-direction: column; */
   }
 
   .active-content{
