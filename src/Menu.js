@@ -116,7 +116,7 @@ const Menu = () => {
                                     <div>
                                         <div className='items' key={item.id}>
                                             <ul>
-                                                <li>{item.Type}</li>
+                                                <li className={item.Type === 'veg' ? 'veg' : 'non-veg'}></li>
                                                 <li>{item.Name}</li>
                                                 <li>₹ {item.Price}</li>
                                                 <img src='/images/pizza1.jpg'/>
