@@ -42,7 +42,7 @@ const Menu = () => {
             //   },
             // });
             // const response = await fetch('https://jsonplaceholder.typicode.com/users');
-            const response = await fetch('https://63b040676a74151a1bbcf341.mockapi.io/restaurantmenu')
+            const response = await fetch('https://63b040676a74151a1bbcf341.mockapi.io/Restaurant-Menu')
             const data = await response.json();
             setData(data);
             // toggleTab(1, "Pizza", data);

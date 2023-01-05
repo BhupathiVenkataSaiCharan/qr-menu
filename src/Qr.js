@@ -13,14 +13,14 @@ const Qr = () => {
     const [url, setUrl] = useState("https://qr-menu-jet.vercel.app/Navbar");
 
 
-    // const scanUrl = () =>{
-    //     navigate('/navbar');
-    // }
+    const scanUrl = () =>{
+        navigate('/Navbar');
+    }
 
   return (
     <div>
         <h2 className='head'>Qr Code to Menu of Restaurant</h2>
-        {/* <button onClick={scanUrl}>Scan</button> */}
+        <button onClick={scanUrl}>Scan</button>
         <QRCodeCanvas value={url} />
     </div>
   )
