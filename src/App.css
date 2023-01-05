@@ -5,9 +5,8 @@ body {
   }
   /* ~~ Top Navigation Bar ~~ */
   
-  @media(min-width:1496px){
     
-    .navigation-container {
+    /* .navigation-container {
       width: 1200px;
       margin: 0 auto;
       height: 70px;
@@ -20,18 +19,16 @@ body {
       box-shadow: 0 5px 15px rgba(0,0,0,.1);
       position: fixed;
       z-index: 1;
-    /*   text-align:center; */
     }
     nav img{
-    width: 100px;
-    height: 40px;
+    width: 150px;
+    height: 60px;
     margin-top: 15px;
     margin-left: 100px;
     }
     nav ul {
       padding: 0px;
       margin: 0px;
-      /* display:inline-block; */
       vertical-align:top;
       float: right;
       margin-right: 200px;
@@ -61,14 +58,12 @@ body {
     }
   
   
-    /* ~~ main content ~~ */
   
   
     .restaurant-card{
       width: 70%;
       height: auto;
       background-color: white;
-      /* position: absolute; */
       position: fixed;
       margin: auto;
       left: 15%;
@@ -76,9 +71,6 @@ body {
       margin-top: 70px;
       box-shadow: 5px 5px 10px 0px rgba(0,0,0,.1);
       display: flex;
-      /* top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%); */
       z-index: 1;
       overflow: hidden;
     }
@@ -98,15 +90,12 @@ body {
       background-color: white;
       width: 19.9%;
       height: 100vh;
-      /* position: absolute; */
       position: fixed;
       margin: auto;
       left: 15%;
       margin-top: 225px;
       border-right: 1px solid #d9d9d9;
       border-top: 1px solid #d9d9d9;
-      /* box-shadow: 0 5px 15px rgba(0,0,0,.1); */
-      /* display: flex; */
     }
   
   
@@ -118,8 +107,6 @@ body {
       margin: auto;
       left: 35%;
       margin-top: 225px;
-      /* box-shadow: 0 5px 15px rgba(0,0,0,.1); */
-      /* display: flex; */
       overflow: auto;
     }
   
@@ -173,7 +160,6 @@ body {
   
     .content{
       display: none;
-      /* flex-direction: column; */
     }
   
     .active-content{
@@ -246,12 +232,10 @@ body {
       background-color: #d9d9d9;
       margin-bottom: 15px;
       margin-top: 10px;
-    }
-
-  }
+    } */
 
 
-  @media(max-width:393px){
+  @media(min-width:393px){
     body{
       margin: 0;
       padding: 0;
@@ -492,3 +476,101 @@ body {
     }
 
   }
+
+  @media(min-width:1496px){
+    nav {
+      background-color: white;
+      height: 70px;
+      width: 100%;
+      box-shadow: 0 5px 15px rgba(0,0,0,.1);
+      position: fixed;
+      z-index: 1;
+      justify-content: space-between;
+    }
+    nav img{
+    width: 100px;
+    height: 55px;
+    position: relative;
+    margin-top: 10px;
+    margin-left: 100px;
+    }
+    nav ul {
+      margin: -9px auto;
+      float: right;
+      margin-right: 150px;
+    }
+    
+   nav li {
+      list-style-type: none;
+      display: inline;
+    }
+    
+    nav li a {
+      color: #0170c1;
+      font-size: 16px;
+      font-weight: bold;
+      font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+      text-decoration: none;
+      line-height: 90px;
+      padding: 5px 15px;
+      opacity: 0.7;
+    }
+
+    .restaurant-card{
+      width: 65%;
+      height: auto;
+      background-color: white;
+      /* position: absolute; */
+      position: fixed;
+      margin: auto;
+      left: 17%;
+      border-top: 1px solid #d9d9d9;
+      margin-top: 70px;
+      box-shadow: 5px 5px 10px 0px rgba(0,0,0,.1);
+      display: flex;
+      /* top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); */
+      z-index: 1;
+      overflow: hidden;
+    }
+
+    .image img{
+      width: 150px;
+      height: 150px;
+      margin-left: 100px;
+    }
+  
+    .restaurant-details{
+      margin-left: 120px;
+    }
+
+    .restaurant-details h2{
+      font-size: 20px;
+      font-weight: bold;
+      margin-top: 30px;
+    }
+    .restaurant-details p{
+      font-size: 18px;
+      font-weight: 400;
+      margin-top: -5px;
+    }
+
+    .restaurant-details p img{
+      width: 35px;
+      height: 35px;
+      margin-left: -5px;
+      margin-top: -5px;
+    }
+    .restaurant-details p span{
+      position: relative;
+      top: -10px;
+      font-size: 16px;
+    }
+
+    .item-category,.item-list{
+      display: none;
+    }
+
+  }
+
