@@ -95,7 +95,7 @@ body {
   .item-category{
     background-color: white;
     width: 19.9%;
-    height: 400px;
+    height: 100vh;
     /* position: absolute; */
     position: fixed;
     margin: auto;
@@ -111,13 +111,19 @@ body {
   .item-list{
     background-color: white;
     width: 25%;
-    height: auto;
-    position: absolute;
+    height: 100vh;
+    position: fixed;
     margin: auto;
     left: 35%;
     margin-top: 225px;
     /* box-shadow: 0 5px 15px rgba(0,0,0,.1); */
     /* display: flex; */
+    overflow: auto;
+  }
+
+  .space{
+    width: auto;
+    height: 40px;
   }
 
 

@@ -124,6 +124,7 @@ const Menu = () => {
                         (<div>Loading...</div>)
                 }
             </div>
+            <div className='space'></div>
         </div> 
     </div>
   )
