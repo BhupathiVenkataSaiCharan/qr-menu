@@ -82,6 +82,13 @@ const Menu = () => {
                 <li className={toggleState === 7 ? "tabs active" : "tabs"} onClick={()=>toggleTab(7, "Juices")}>Juices</li>
             </ul>
             
+            <div className='select'>
+                <select>
+                    <option>All</option>
+                    <option>Pizza</option>
+                </select>
+            </div>
+            
         </div>
         <div className='item-list'>
             <div className="box">
