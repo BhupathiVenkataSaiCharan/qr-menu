@@ -24,7 +24,7 @@ const Menu = () => {
 
     /*Filter Data start*/
 
-    
+    const [search, setSearch] = useState();
 
     /*Filter Data end*/
 
@@ -34,7 +34,7 @@ const Menu = () => {
     const [data, setData] = useState();
 
     useEffect(() => {
-        async function fetchData() {
+        async function fetchData(){
           try {
             // const response = await fetch(API_URL, {
             //   headers: {
@@ -44,8 +44,8 @@ const Menu = () => {
             // const response = await fetch('https://jsonplaceholder.typicode.com/users');
             const response = await fetch('https://63b040676a74151a1bbcf341.mockapi.io/restaurantmenu')
             const data = await response.json();
-            // setData(data);
-            toggleTab(1, "Pizza", data);
+            setData(data);
+            // toggleTab(1, "Pizza", data);
             setMainArray(data);
           } catch (error) {
             console.error(error);
@@ -73,48 +73,40 @@ const Menu = () => {
         <div className='item-category'>
             <h3>Categories</h3>
             <ul>
-                <li className={toggleState === 1 ? "tabs active" : "tabs"} onClick={()=>toggleTab(1, "Pizza")}>Pizza</li>
-                <li className={toggleState === 2 ? "tabs active" : "tabs"} onClick={()=>toggleTab(2, "Bread")}>Bread</li>
-                <li className={toggleState === 3 ? "tabs active" : "tabs"} onClick={()=>toggleTab(3, "Shakes")}>Shakes</li>
-                <li className={toggleState === 4 ? "tabs active" : "tabs"} onClick={()=>toggleTab(4, "Ice-Cream")}>Ice Cream</li>
-                <li className={toggleState === 5 ? "tabs active" : "tabs"} onClick={()=>toggleTab(5, "Cakes")}>Cakes</li>
-                <li className={toggleState === 6 ? "tabs active" : "tabs"} onClick={()=>toggleTab(6, "Juices")}>Juices</li>
+                <li className={toggleState === 1 ? "tabs active" : "tabs"} onClick={()=>{toggleTab(1); setData(mainArray)}}>All</li>
+                <li className={toggleState === 2 ? "tabs active" : "tabs"} onClick={()=>toggleTab(2, "Pizza")}>Pizza</li>
+                <li className={toggleState === 3 ? "tabs active" : "tabs"} onClick={()=>toggleTab(3, "Bread")}>Bread</li>
+                <li className={toggleState === 4 ? "tabs active" : "tabs"} onClick={()=>toggleTab(4, "Shakes")}>Shakes</li>
+                <li className={toggleState === 5 ? "tabs active" : "tabs"} onClick={()=>toggleTab(5, "Ice-Cream")}>Ice Cream</li>
+                <li className={toggleState === 6 ? "tabs active" : "tabs"} onClick={()=>toggleTab(6, "Cakes")}>Cakes</li>
+                <li className={toggleState === 7 ? "tabs active" : "tabs"} onClick={()=>toggleTab(7, "Juices")}>Juices</li>
             </ul>
             
         </div>
         <div className='item-list'>
             <div className="box">
+            {/* value={search} onChange={(e)=>setSearch(e.target.value)} */}
                 <input type="text" className="search-input" placeholder="Search for dishes"/>
                 <img src='/images/search.png'/>
             </div>
             <div className="contents">
-                {/* <h2>Pizza's (4 items)</h2>
-                <div className='items'>
-                    <ul>
-                        <li>
-                            <div className='non-veg'></div>
-                            <h2>Chicken Pizza</h2>
-                            <p>₹ 376</p>
-                        </li>
-                        <div className='hr'></div>
-                    </ul>
-                </div> */}
                 {
                     data 
                     ? 
                         (
                         <div>
                             <div>
-                            <h2 className={toggleState === 1 ? "content active-content" : "content"}>Pizza</h2>
-                            <h2 className={toggleState === 2 ? "content active-content" : "content"}>Bread</h2>
-                            <h2 className={toggleState === 3 ? "content active-content" : "content"}>Shakes</h2>
-                            <h2 className={toggleState === 4 ? "content active-content" : "content"}>Ice Creams</h2>
-                            <h2 className={toggleState === 5 ? "content active-content" : "content"}>Cakes</h2>
-                            <h2 className={toggleState === 6 ? "content active-content" : "content"}>Juices</h2>
+                            <h2 className={toggleState === 1 ? "content active-content" : "content"}>All</h2>
+                            <h2 className={toggleState === 2 ? "content active-content" : "content"}>Pizza</h2>
+                            <h2 className={toggleState === 3 ? "content active-content" : "content"}>Bread</h2>
+                            <h2 className={toggleState === 4 ? "content active-content" : "content"}>Shakes</h2>
+                            <h2 className={toggleState === 5 ? "content active-content" : "content"}>Ice Creams</h2>
+                            <h2 className={toggleState === 6 ? "content active-content" : "content"}>Cakes</h2>
+                            <h2 className={toggleState === 7 ? "content active-content" : "content"}>Juices</h2>
                             {/* {filteredData.map(item => */}
+                            {/* .filter(item=>item.Name.toLowerCase().includes(search.toLowerCase())) */}
                                 {data.map(item =>
                                     <div>
-                                        {/* <h2>{item.Category}</h2> */}
                                         <div className='items' key={item.id}>
                                             <ul>
                                                 <li>{item.Type}</li>

@@ -99,14 +99,14 @@
   },
   {
     "Name": "Vanilla IceCream",
-    "Category": "Ice-Cream's",
+    "Category": "Ice-Cream",
     "Type": "veg",
     "Price": 110,
     "id": "15"
   },
   {
     "Name": "Mixed Fruit IceCream",
-    "Category": "Ice-Cream's",
+    "Category": "Ice-Cream",
     "Type": "veg",
     "Price": 140,
     "id": "16"
