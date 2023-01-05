@@ -349,6 +349,10 @@ body {
     .item-category h3{
       display: none;
     }
+
+    .item-category ul{
+      margin-top: 60px;
+    }
   
     .item-category ul li{
       list-style-type: none;
