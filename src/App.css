@@ -218,6 +218,15 @@ body {
       font-size: 16px;
     }
   
+    .items img{
+      width: 40px;
+      height: 40px;
+      position: relative;
+      float: right;
+      margin-top: -55px;
+      margin-right: 25px;
+    }
+
     .non-veg{
       width: 20px;
       height: 15px;
@@ -236,11 +245,13 @@ body {
       height: 1px;
       background-color: #d9d9d9;
       margin-bottom: 15px;
+      margin-top: 10px;
     }
+
   }
 
 
-  @media(min-width:393px){
+  @media(max-width:393px){
     body{
       margin: 0;
       padding: 0;
