@@ -82,12 +82,12 @@ const Menu = () => {
                 <li className={toggleState === 7 ? "tabs active" : "tabs"} onClick={()=>toggleTab(7, "Juices")}>Juices</li>
             </ul>
             
-            <div className='select'>
+            {/* <div className='select'>
                 <select>
                     <option>All</option>
                     <option>Pizza</option>
                 </select>
-            </div>
+            </div> */}
             
         </div>
         <div className='item-list'>
@@ -119,6 +119,7 @@ const Menu = () => {
                                                 <li>{item.Type}</li>
                                                 <li>{item.Name}</li>
                                                 <li>₹ {item.Price}</li>
+                                                <img src='/images/pizza1.jpg'/>
                                                 <div className='hr'></div>
                                             </ul>
                                         </div>

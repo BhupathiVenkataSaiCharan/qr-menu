@@ -336,13 +336,135 @@ body {
       top: -6px;
       font-size: 12px;
     }
-    
-
 
     .item-category{
+      background-color: white;
+      width: 30%;
+      height: 100vh;
+      /* position: absolute; */
+      position: fixed;
+      margin: auto;
+      margin-top: 181px;
+      border-right: 1px solid #d9d9d9;
+      border-top: 1px solid #d9d9d9;
+      /* box-shadow: 0 5px 15px rgba(0,0,0,.1); */
+      /* display: flex; */
+    }
+
+    .item-category h3{
       display: none;
     }
+  
+    .item-category ul li{
+      list-style-type: none;
+      padding: 10px;
+      font-size: 13px;
+      cursor: pointer;
+      margin-left: -20px;
+
+    }
+
+    .active{
+      color: #0170c1;
+      border-right: 2px solid #0170c1;
+      font-weight: 600;
+      /* background-image: linear-gradient(to right, white, #2d96e1); */
+    }
+
     .item-list{
-      display: none;
+      background-color: white;
+      width: 69%;
+      height: 100vh;
+      position: fixed;
+      margin: auto;
+      left: 30.5%;
+      margin-top: 181px;
+      /* box-shadow: 0 5px 15px rgba(0,0,0,.1); */
+      /* display: flex; */
+      overflow: auto;
     }
+
+    .box{
+      margin:15px 5px 0;
+    }
+    .box input{
+      width: 250px;
+      height: 30px;
+      color: blue;
+    }
+  
+    .box img{
+      width: 30px;
+      height: 30px;
+      position: relative;
+      top: -33px;
+      left: 225px;
+      border-left: 1px solid black;
+    }
+
+    .contents{
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .contents h2{
+      position: relative;
+      margin-top: -20px;
+      margin-left: 20px;
+      font-size: 20px;
+    }
+
+    .content{
+      display: none;
+      /* flex-direction: column; */
+    }
+  
+    .active-content{
+      display:flex;
+      flex-direction: column;
+    }
+
+
+    .item-list ul li{
+      list-style-type: none;
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .item-list ul li h2{
+      margin-top: 10px;
+      margin-left: -5px;
+      font-size: 18px;
+    }
+  
+    .item-list ul li p{
+      margin-top: -10px;
+      margin-left: -5px;
+      font-size: 16px;
+    }
+
+    .items img{
+      width: 40px;
+      height: 40px;
+      position: relative;
+      float: right;
+      margin-top: -55px;
+      margin-right: 25px;
+    }
+
+
+    .space{
+      width: auto;
+      height: 400px;
+    }
+
+    .hr{
+      width: 250px;
+      height: 1px;
+      background-color: #d9d9d9;
+      margin-bottom: 15px;
+      margin-left: -30px;
+    }
+  
+
   }
