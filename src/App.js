@@ -18,7 +18,7 @@ function App() {
           <Route path='/Navbar' element={<Navbar/>} />
 
           <Route path="*" element={<Navigate replace to="/Navbar"/>}/>
-          <Route path="/" element={<Navigate replace to="/Navbar"/>}/>
+          <Route path="/" element={<Navigate replace to="/Qr"/>}/>
         </Routes>
       </Router>
     </div>
