@@ -579,7 +579,7 @@ body {
 
     .item-category{
       background-color: white;
-      width: 19.9%;
+      width: 19%;
       height: 100vh;
       position: fixed;
       margin: auto;
@@ -619,7 +619,113 @@ body {
     /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ item list ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
     .item-list{
+      background-color: white;
+      width: 25%;
+      height: 100vh;
+      position: fixed;
+      margin: auto;
+      left: 36.1%;
+      margin-top: 248px;
+      border-top: 1px solid #d9d9d9;
+      /* box-shadow: 0 5px 15px rgba(0,0,0,.1); */
+      /* display: flex; */
+      overflow: auto;
+    }
+
+    .box{
+      margin:15px 5px 0;
+    }
+    .box input{
+      width: 350px;
+      height: 30px;
+      color: blue;
+    }
+  
+    .box img{
+      width: 30px;
+      height: 30px;
+      position: relative;
+      top: -33px;
+      left: 325px;
+      border-left: 1px solid black;
+    }
+
+    .contents{
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .contents h2{
+      position: relative;
+      margin-top: -20px;
+      margin-left: 20px;
+      font-size: 20px;
+    }
+
+    .content{
       display: none;
+      /* flex-direction: column; */
+    }
+  
+    .active-content{
+      display:flex;
+      flex-direction: column;
+    }
+
+    .item-list ul li{
+      list-style-type: none;
+      display: flex;
+      flex-direction: column;
+      font-size: 17px;
+      font-weight: 500;
+      margin: 5px;
+    }
+  
+    .item-list ul li h2{
+      margin-top: 10px;
+      margin-left: -5px;
+      font-size: 18px;
+    }
+  
+    .item-list ul li p{
+      margin-top: -10px;
+      margin-left: -5px;
+      font-size: 16px;
+    }
+
+    .items img{
+      width: 40px;
+      height: 40px;
+      position: relative;
+      float: right;
+      margin-top: -63px;
+      margin-right: 50px;
+    }
+
+    .non-veg{
+      width: 20px;
+      height: 15px;
+      background-color: red;
+    }
+
+    .veg{
+      width: 20px;
+      height: 15px;
+      background-color: green;
+    }
+
+    .space{
+      width: auto;
+      height: 250px;
+    }
+
+    .hr{
+      width: 310px;
+      height: 1px;
+      background-color: #d9d9d9;
+      margin-bottom: 15px;
+      margin-left: -15px;
+      margin-top: 10px;
     }
 
   }
