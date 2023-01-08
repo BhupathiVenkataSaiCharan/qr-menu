@@ -278,6 +278,10 @@ body {
       opacity: 0.7;
     }
 
+    nav ul li .help{
+      display: none;
+    }
+
     
     .restaurant-card{
       width: 100%;
@@ -334,8 +338,8 @@ body {
 
     .item-category{
       background-color: white;
-      width: 30%;
-      height: 100vh;
+      width: 100%;
+      height: 100px;
       /* position: absolute; */
       position: fixed;
       margin: auto;
@@ -344,6 +348,7 @@ body {
       border-top: 1px solid #d9d9d9;
       /* box-shadow: 0 5px 15px rgba(0,0,0,.1); */
       /* display: flex; */
+      display: none;
     }
 
     .item-category h3{
@@ -370,21 +375,57 @@ body {
       /* background-image: linear-gradient(to right, white, #2d96e1); */
     }
 
+
+
+    .hscroll{
+      background-color: white;
+      position: relative;
+      top: 181px;
+      overflow: auto;
+      white-space: nowrap;
+      border: 1px solid #d9d9d9;
+    }
+
+    .hscroll ::-webkit-scrollbar{
+      width: 0;
+    }
+
+    .hscroll ul{
+      margin-left: -30px;
+    }
+
+    .hscroll ul li{
+      display: inline-block;
+      /* color: black; */
+      text-align: center;
+      padding: 3px 10px;
+      margin: 0px 10px;
+      text-decoration: none;
+      border: 1px solid #0170c1;
+      border-radius: 20px;
+    }
+
+    .clicked{
+      color: white;
+      background-color: #0170c1;
+    }
+    
+
     .item-list{
       background-color: white;
-      width: 69%;
+      /* width: 69%; */
+      width: 100%;
       height: 100vh;
       position: fixed;
       margin: auto;
-      left: 30.5%;
+      /* left: 30.5%; */
       margin-top: 181px;
-      /* box-shadow: 0 5px 15px rgba(0,0,0,.1); */
-      /* display: flex; */
       overflow: auto;
     }
 
     .box{
       margin:15px 5px 0;
+      display: none;
     }
     .box input{
       width: 250px;
@@ -404,6 +445,7 @@ body {
     .contents{
       display: flex;
       flex-direction: column;
+      margin-top: 80px;
     }
   
     .contents h2{
@@ -520,6 +562,10 @@ body {
       opacity: 0.7;
     }
 
+    nav ul li .help{
+      display: inline;
+    }
+
     /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ restaurant card ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
     .restaurant-card{
@@ -588,7 +634,7 @@ body {
       border-right: 1px solid #d9d9d9;
       border-top: 1px solid #d9d9d9;
       /* box-shadow: 0 5px 15px rgba(0,0,0,.1); */
-      /* display: flex; */
+      display: flex;
     }
 
     .item-category h3{
@@ -612,7 +658,20 @@ body {
       color: #0170c1;
       border-right: 3px solid #0170c1;
       font-weight: 700;
+      margin: 0px -86px;
       /* background-image: linear-gradient(to right, white, #2d96e1); */
+    }
+
+    .active1{
+      margin: 0px -108px;
+    }
+
+    .contents .active2{
+      margin-top: -16px;
+    }
+
+    .hscroll{
+      display: none;
     }
 
 
@@ -620,7 +679,7 @@ body {
 
     .item-list{
       background-color: white;
-      width: 25%;
+      width: 27%;
       height: 100vh;
       position: fixed;
       margin: auto;
@@ -634,6 +693,7 @@ body {
 
     .box{
       margin:15px 5px 0;
+      display: block;
     }
     .box input{
       width: 350px;
@@ -653,6 +713,7 @@ body {
     .contents{
       display: flex;
       flex-direction: column;
+      margin-top: 5px;
     }
   
     .contents h2{

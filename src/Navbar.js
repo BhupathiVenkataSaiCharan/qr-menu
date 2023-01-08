@@ -10,7 +10,7 @@ const Navbar = () => {
             <div id="navigation-container">
                 <img src="/images/logo.svg"/>
                 <ul>
-                    <li><a href="#">Help</a></li>
+                    <li><a href="#" className='help'>Help</a></li>
                     <li><a href="#">Signin</a></li>
                     {/* <li><a href="#">About</a></li>
                     <li><a href="#">Services</a></li>
