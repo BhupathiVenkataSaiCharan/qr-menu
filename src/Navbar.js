@@ -11,7 +11,7 @@ const Navbar = () => {
                 <img src="/images/logo.svg"/>
                 <ul>
                     <li><a href="#" className='help'>Help</a></li>
-                    <li><a href="#">Signin</a></li>
+                    <li><a href="#"><img src='/images/signin.png'/>Signin</a></li>
                     {/* <li><a href="#">About</a></li>
                     <li><a href="#">Services</a></li>
                     <li><a href="#">Get in Touch</a></li> */}

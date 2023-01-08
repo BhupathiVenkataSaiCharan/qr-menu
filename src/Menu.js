@@ -29,6 +29,16 @@ const Menu = () => {
     /*Filter Data end*/
 
 
+    /*filter veg and non veg */
+
+    const [veg, setVeg] = useState(true);
+
+    const vegOnly = () =>{
+        setVeg(false);
+    }
+
+
+
     /* API Data start */
 
     const [data, setData] = useState();
@@ -92,6 +102,7 @@ const Menu = () => {
         </div>
 
             <div className='hscroll'>
+            
                 <ul>
                     <li className={toggleState === 1 ? "tabs clicked" : "tabs"} onClick={()=>{toggleTab(1); setData(mainArray)}}>All</li>
                     <li className={toggleState === 2 ? "tabs clicked" : "tabs"} onClick={()=>{toggleTab(2, "Pizza")}}>Pizza</li>
@@ -101,6 +112,9 @@ const Menu = () => {
                     <li className={toggleState === 6 ? "tabs clicked" : "tabs"} onClick={()=>{toggleTab(6, "Cakes")}}>Cakes</li>
                     <li className={toggleState === 7 ? "tabs clicked" : "tabs"} onClick={()=>{toggleTab(7, "Juices")}}>Juices</li>
                 </ul>
+                <div>
+                
+                </div>
             </div>
 
         <div className='item-list'>
@@ -109,12 +123,23 @@ const Menu = () => {
                 <input type="text" className="search-input" placeholder="Search for dishes"/>
                 <img src='/images/search.png'/>
             </div>
+           
             <div className="contents">
                 {
                     data 
                     ? 
                         (
                         <div>
+                            <div className='checkbox'>
+                                <label>
+                                    <input type="checkbox"
+                                        value={veg}
+                                        onChange={vegOnly}
+                                    />
+                                    Veg Only
+                                </label>
+                            </div>
+
                             <div>
                             <h2 className={toggleState === 1 ? "content active-content" : "content"}>All</h2>
                             <h2 className={toggleState === 2 ? "content active-content active2" : "content"}>Pizza</h2>
