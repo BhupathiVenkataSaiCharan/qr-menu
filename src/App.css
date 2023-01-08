@@ -420,6 +420,7 @@ body {
 
 
     .checkbox{
+      width: 90px;
       position: relative;
       top: -55px;
       left: 20px;
@@ -691,7 +692,7 @@ body {
     }
 
     .contents .active2{
-      margin-top: -16px;
+      margin-top: -20px;
     }
 
     .hscroll{
@@ -703,6 +704,7 @@ body {
 
 
     .checkbox{
+      width: 100px;
       position: relative;
       top: -25px;
       left: 292px;
