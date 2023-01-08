@@ -446,6 +446,7 @@ body {
       display: flex;
       flex-direction: column;
       margin-top: 80px;
+      margin-bottom: 50px;
     }
   
     .contents h2{
@@ -520,7 +521,7 @@ body {
       width: 320px;
       height: 1px;
       background-color: #d9d9d9;
-      margin-bottom: 15px;
+      margin-bottom: 25px;
       margin-left: -20px;
       margin-top: 10px;
     }
