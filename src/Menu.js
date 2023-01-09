@@ -31,13 +31,10 @@ const Menu = () => {
 
     /*filter veg and non veg */
 
-    // const [data, setData] = useState([]); // initial value of []
-
-
 
     /* API Data start */
 
-    const [data, setData] = useState([]);
+    const [data, setData] = useState([]); //solved from stackoverflow
 
     const [vegOnly, setVegOnly] = useState(false);
 
@@ -47,7 +44,7 @@ const Menu = () => {
     };
 
     const filteredData =
-    vegOnly === false ? data : data.filter((item) => item.Type === "veg");
+    vegOnly === false ? data : data.filter((item) => item.Type === "veg"); //from above to here for filter veg only
 
 
     useEffect(() => {
