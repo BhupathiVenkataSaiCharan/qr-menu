@@ -31,17 +31,24 @@ const Menu = () => {
 
     /*filter veg and non veg */
 
-    const [veg, setVeg] = useState(true);
-
-    const vegOnly = () =>{
-        setVeg(false);
-    }
+    // const [data, setData] = useState([]); // initial value of []
 
 
 
     /* API Data start */
 
-    const [data, setData] = useState();
+    const [data, setData] = useState([]);
+
+    const [vegOnly, setVegOnly] = useState(false);
+
+    const handleVegInputChange = (e) => {
+    const isChecked = e.target.checked;
+    setVegOnly(isChecked);
+    };
+
+    const filteredData =
+    vegOnly === false ? data : data.filter((item) => item.Type === "veg");
+
 
     useEffect(() => {
         async function fetchData(){
@@ -133,8 +140,8 @@ const Menu = () => {
                             <div className='checkbox'>
                                 <label>
                                     <input type="checkbox"
-                                        value={veg}
-                                        onChange={vegOnly}
+                                        value={vegOnly}
+                                        onChange={handleVegInputChange}
                                     />
                                     Veg Only
                                 </label>
@@ -150,7 +157,8 @@ const Menu = () => {
                             <h2 className={toggleState === 7 ? "content active-content" : "content"}>Juices</h2>
                             {/* {filteredData.map(item => */}
                             {/* .filter(item=>item.Name.toLowerCase().includes(search.toLowerCase())) */}
-                                {data.map(item =>
+                                {/* {data.map(item => */}
+                                {filteredData.map(item=>
                                     <div>
                                         <div className='items' key={item.id}>
                                             <ul>
