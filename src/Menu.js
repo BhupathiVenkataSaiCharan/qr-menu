@@ -170,6 +170,7 @@ const Menu = () => {
                             {/* {filteredData.map(item => */}
                             {/* .filter(item=>item.Name.toLowerCase().includes(search.toLowerCase())) */}
                                 {/* {data.map(item => */}
+                                
                                 {filteredData.map(item=>
                                     <div>
                                         <div className='items' key={item.id}>
