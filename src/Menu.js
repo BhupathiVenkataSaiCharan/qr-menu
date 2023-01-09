@@ -24,7 +24,8 @@ const Menu = () => {
 
     /*Filter Data start*/
 
-    const [search, setSearch] = useState();
+    // const [search, setSearch] = useState();
+    
 
     /*Filter Data end*/
 
@@ -45,6 +46,7 @@ const Menu = () => {
 
     const filteredData =
     vegOnly === false ? data : data.filter((item) => item.Type === "veg"); //from above to here for filter veg only
+
 
 
     useEffect(() => {
@@ -139,7 +141,7 @@ const Menu = () => {
         <div className='item-list'>
             <div className="box">
             {/* value={search} onChange={(e)=>setSearch(e.target.value)} */}
-                <input type="text" className="search-input" placeholder="Search for dishes"  value={search} onChange={(e)=>setSearch(e.target.value)}/>
+                <input type="text" className="search-input" placeholder="Search for dishes"/>
                 <img src='/images/search.png'/>
             </div>
            
