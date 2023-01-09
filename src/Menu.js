@@ -24,8 +24,7 @@ const Menu = () => {
 
     /*Filter Data start*/
 
-    // const [search, setSearch] = useState();
-    
+    const [search, setSearch] = useState('');
 
     /*Filter Data end*/
 
@@ -141,7 +140,7 @@ const Menu = () => {
         <div className='item-list'>
             <div className="box">
             {/* value={search} onChange={(e)=>setSearch(e.target.value)} */}
-                <input type="text" className="search-input" placeholder="Search for dishes"/>
+                <input type="text" className="search-input" placeholder="Search for dishes" value={search} onChange={(e)=>setSearch(e.target.value)}/>
                 <img src='/images/search.png'/>
             </div>
            
@@ -173,7 +172,7 @@ const Menu = () => {
                             {/* .filter(item=>item.Name.toLowerCase().includes(search.toLowerCase())) */}
                                 {/* {data.map(item => */}
                                 
-                                {filteredData.map(item=>
+                                {filteredData.filter(item=>item.Name.toLowerCase().includes(search.toLowerCase())).map(item=>
                                     <div>
                                         <div className='items' key={item.id}>
                                             <ul>
@@ -190,7 +189,7 @@ const Menu = () => {
                         </div>
                         ) 
                     : 
-                        (<div>Loading...</div>)
+                        (<div className='loading'>Loading...</div>)
                 }
             </div>
             <div className='space'></div>
