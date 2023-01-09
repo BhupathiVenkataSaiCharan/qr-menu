@@ -72,6 +72,21 @@ const Menu = () => {
     /* API Data end */
 
   return (
+
+    <>
+
+        <nav>
+            <div id="navigation-container">
+                <img src="/images/logo.svg"/>
+                <ul>
+                    <li><a href="#" className='help'>Help</a></li>
+                    <li><a href="#"><img src='/images/signin.png'/>Signin</a></li>
+                    {/* <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Get in Touch</a></li> */}
+                </ul>
+            </div>
+        </nav>
     
     <div className='main-content'>
         <div className='restaurant-card'>
@@ -155,7 +170,7 @@ const Menu = () => {
                             {/* {filteredData.map(item => */}
                             {/* .filter(item=>item.Name.toLowerCase().includes(search.toLowerCase())) */}
                                 {/* {data.map(item => */}
-                                {filteredData.filter(item=>item.Name.toLowerCase().includes(search.toLowerCase())).map(item=>
+                                {filteredData.map(item=>
                                     <div>
                                         <div className='items' key={item.id}>
                                             <ul>
@@ -178,6 +193,8 @@ const Menu = () => {
             <div className='space'></div>
         </div> 
     </div>
+
+    </>
   )
 }
 

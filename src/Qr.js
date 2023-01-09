@@ -10,11 +10,11 @@ const Qr = () => {
 
     // const [url, setUrl] = useState("http://localhost:3000/navbar");
     // const [url, setUrl] = useState("https://qr-menu-jet.vercel.app/navbar");
-    const [url, setUrl] = useState("https://qr-menu-jet.vercel.app/Navbar");
+    const [url, setUrl] = useState("https://qr-menu-jet.vercel.app/Menu");
 
 
     const scanUrl = () =>{
-        navigate('/Navbar');
+        navigate('/Menu');
     }
 
   return (

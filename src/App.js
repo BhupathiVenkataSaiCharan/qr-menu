@@ -4,6 +4,7 @@ import Navbar from "./Navbar";
 import Qr from './Qr';
 
 import { BrowserRouter as Router,Routes,Route, Navigate } from 'react-router-dom';
+import Menu from './Menu';
 
 
 function App() {
@@ -11,10 +12,13 @@ function App() {
     <div className='App'>
       <Router>
         <Routes>
-          <Route path='/Qr' element={<Qr/>} />
-          <Route path='/Navbar' element={<Navbar/>} />
+        <Route exact path='/Qr' element={<Qr/>} />
+          {/* <Route path='/Qr' element={<Qr/>} />
+          <Route path='/Navbar' element={<Navbar/>} /> */}
 
-          <Route path="*" element={<Navigate replace to="/Navbar"/>}/>
+          <Route path='/Menu' element={<Menu/>} />
+
+          <Route path="*" element={<Navigate replace to="/Qr"/>}/>
           <Route path="/" element={<Navigate replace to="/Qr"/>}/>
         </Routes>
       </Router>
