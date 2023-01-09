@@ -124,7 +124,7 @@ const Menu = () => {
         <div className='item-list'>
             <div className="box">
             {/* value={search} onChange={(e)=>setSearch(e.target.value)} */}
-                <input type="text" className="search-input" placeholder="Search for dishes"/>
+                <input type="text" className="search-input" placeholder="Search for dishes"  value={search} onChange={(e)=>setSearch(e.target.value)}/>
                 <img src='/images/search.png'/>
             </div>
            
@@ -155,7 +155,7 @@ const Menu = () => {
                             {/* {filteredData.map(item => */}
                             {/* .filter(item=>item.Name.toLowerCase().includes(search.toLowerCase())) */}
                                 {/* {data.map(item => */}
-                                {filteredData.map(item=>
+                                {filteredData.filter(item=>item.Name.toLowerCase().includes(search.toLowerCase())).map(item=>
                                     <div>
                                         <div className='items' key={item.id}>
                                             <ul>

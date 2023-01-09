@@ -446,7 +446,8 @@ body {
     .box input{
       width: 250px;
       height: 30px;
-      color: blue;
+      color: #0170c1;
+      font-size: 15px;
     }
   
     .box img{
@@ -732,7 +733,8 @@ body {
     .box input{
       width: 350px;
       height: 30px;
-      color: blue;
+      color: #0170c1;
+      font-size: 15px;
     }
   
     .box img{
