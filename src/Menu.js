@@ -24,7 +24,7 @@ const Menu = () => {
 
     /*Filter Data start*/
 
-    const [search, setSearch] = useState('');
+    const [search, setSearch] = useState("");
 
     /*Filter Data end*/
 
