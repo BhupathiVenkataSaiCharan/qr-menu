@@ -20,7 +20,7 @@ const Qr = () => {
   return (
     <div>
         <h2 className='head'>Qr Code to Menu of Restaurant</h2>
-        <button onClick={scanUrl}>Scan</button>
+        <button onClick={scanUrl}>Go to Menu Page</button>
         <QRCodeCanvas value={url} />
     </div>
   )
