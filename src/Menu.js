@@ -1,17 +1,10 @@
-import React, { useState, useEffect } from 'react';
-
+import React, {useState, useEffect} from 'react';
 
 const Menu = () => {
-
-    /*Toggle sidemenu start*/
 
     const [toggleState, setToggleState] = useState(1);
 
     const [mainArray, setMainArray] = useState();
-
-    // const toggleTab = (index) =>{
-    //     setToggleState(index);
-    // }
 
     const toggleTab = (index, name, item) => {
         let array = item ? item : mainArray;
@@ -20,34 +13,10 @@ const Menu = () => {
         setData(filteredArray);
         };
 
-    /*Toggle sidemenu end*/
-
-    /*Filter Data start*/
-
-    const [search, setSearch] = useState("");
-
-    /*Filter Data end*/
-
-
-    /*filter veg and non veg */
-
-
-    /* API Data start */
-
     const [data, setData] = useState([]); //solved from stackoverflow
 
-    const [vegOnly, setVegOnly] = useState(false);
-
-    const handleVegInputChange = (e) => {
-    const isChecked = e.target.checked;
-    setVegOnly(isChecked);
-    };
-
-    const filteredData =
-    vegOnly === false ? data : data.filter((item) => item.Type === "veg"); //from above to here for filter veg only
-
-
-
+    const [search,setSearch] = useState("");
+        
     useEffect(() => {
         async function fetchData(){
           try {
@@ -70,59 +39,39 @@ const Menu = () => {
         fetchData();
       }, []);
 
-    /* API Data end */
+
+    const [vegOnly, setVegOnly] = useState(false);
+
+    const handleVegInputChange = (e) => {
+    const isChecked = e.target.checked;
+    setVegOnly(isChecked);
+    };
+
+    const filteredData =
+    vegOnly === false ? data : data.filter((item) => item.Type === "veg"); //from above to here for filter veg only
 
   return (
-
-    <>
-
+    <div className='first'>
         <nav>
-            <div id="navigation-container">
-                <img src="/images/logo.svg"/>
+            <label><img src='/images/logo.svg' /></label>
+            <ul>
+                <li><a href="#" className='help'>Help</a></li>
+                <li><a href="#"><img src='/images/signin.png'/>Signin</a></li>
+            </ul>
+        </nav>
+        <div className='resinfo'>
+            <div className='resdata'>
+                <div className='resimage'>
+                    <img src='/images/kfc.png'/>
+                </div>
                 <ul>
-                    <li><a href="#" className='help'>Help</a></li>
-                    <li><a href="#"><img src='/images/signin.png'/>Signin</a></li>
-                    {/* <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Get in Touch</a></li> */}
+                    <li><h3>Shah Ghouse Hotel & Restaurant</h3></li>
+                    <li><p>Abids,Hyderabad</p></li>
+                    <li><p><img src='/images/rating.png'/><span>4.5 Rating | 09:00 A.M - 11:00 P.M</span></p></li>
                 </ul>
             </div>
-        </nav>
-    
-    <div className='main-content'>
-        <div className='restaurant-card'>
-            <div className='image'>
-                <img src='/images/kfc.png'/>
-            </div>
-            <div className='restaurant-details'>
-                <h2>KFC</h2>
-                <p>Abids, Hyderabad</p>
-                <p><img src='/images/rating.png'/><span>4.5 Rating | 09:00 A.M - 11:00 P.M</span></p>
-            </div>
         </div>
-        <div className='item-category'>
-            <h3>Categories</h3>
-            <ul>
-                <li className={toggleState === 1 ? "tabs active" : "tabs"} onClick={()=>{toggleTab(1); setData(mainArray)}}>All</li>
-                <li className={toggleState === 2 ? "tabs active" : "tabs"} onClick={()=>toggleTab(2, "Pizza")}>Pizza</li>
-                <li className={toggleState === 3 ? "tabs active" : "tabs"} onClick={()=>toggleTab(3, "Bread")}>Bread</li>
-                <li className={toggleState === 4 ? "tabs active" : "tabs"} onClick={()=>toggleTab(4, "Shakes")}>Shakes</li>
-                <li className={toggleState === 5 ? "tabs active active1" : "tabs"} onClick={()=>toggleTab(5, "Ice-Cream")}>Ice Cream</li>
-                <li className={toggleState === 6 ? "tabs active" : "tabs"} onClick={()=>toggleTab(6, "Cakes")}>Cakes</li>
-                <li className={toggleState === 7 ? "tabs active" : "tabs"} onClick={()=>toggleTab(7, "Juices")}>Juices</li>
-            </ul>
-
-            {/* <div className='select'>
-                <select>
-                    <option>All</option>
-                    <option>Pizza</option>
-                </select>
-            </div> */}
-            
-        </div>
-
-            <div className='hscroll'>
-            
+        <div className='hscroll'>
                 <ul>
                     <li className={toggleState === 1 ? "tabs clicked" : "tabs"} onClick={()=>{toggleTab(1); setData(mainArray)}}>All</li>
                     <li className={toggleState === 2 ? "tabs clicked" : "tabs"} onClick={()=>{toggleTab(2, "Pizza")}}>Pizza</li>
@@ -132,19 +81,28 @@ const Menu = () => {
                     <li className={toggleState === 6 ? "tabs clicked" : "tabs"} onClick={()=>{toggleTab(6, "Cakes")}}>Cakes</li>
                     <li className={toggleState === 7 ? "tabs clicked" : "tabs"} onClick={()=>{toggleTab(7, "Juices")}}>Juices</li>
                 </ul>
-                <div>
-                
-                </div>
+            </div>
+        <div className='resinfo2'>
+            <div className='rescategory'>
+                {/* <h3>Categories</h3> */}
+                <ul>
+                    <li className={toggleState === 1 ? "tabs active" : "tabs"} onClick={()=>{toggleTab(1); setData(mainArray)}}>All</li>
+                    <li className={toggleState === 2 ? "tabs active" : "tabs"} onClick={()=>toggleTab(2, "Pizza")}>Pizza</li>
+                    <li className={toggleState === 3 ? "tabs active" : "tabs"} onClick={()=>toggleTab(3, "Bread")}>Bread</li>
+                    <li className={toggleState === 4 ? "tabs active" : "tabs"} onClick={()=>toggleTab(4, "Shakes")}>Shakes</li>
+                    <li className={toggleState === 5 ? "tabs active active1" : "tabs"} onClick={()=>toggleTab(5, "Ice-Cream")}>Ice Cream</li>
+                    <li className={toggleState === 6 ? "tabs active" : "tabs"} onClick={()=>toggleTab(6, "Cakes")}>Cakes</li>
+                    <li className={toggleState === 7 ? "tabs active" : "tabs"} onClick={()=>toggleTab(7, "Juices")}>Juices</li>
+                </ul>
             </div>
 
-        <div className='item-list'>
-            <div className="box">
-            {/* value={search} onChange={(e)=>setSearch(e.target.value)} */}
-                <input type="text" className="search-input" placeholder="Search for dishes" value={search} onChange={(e)=>setSearch(e.target.value)}/>
-                <img src='/images/search.png'/>
-            </div>
-           
-            <div className="contents">
+            <div className='resitems'>
+                <div className="box">
+                    <input type="text" className="search-input" placeholder="Search for dishes" value={search} onChange={(e)=>setSearch(e.target.value)}/>
+                    <img src='/images/search.png'/>
+                </div>
+
+                <div className="contents">
                 {
                     data 
                     ? 
@@ -160,21 +118,22 @@ const Menu = () => {
                                 </label>
                             </div>
 
-                            <div>
-                            <h2 className={toggleState === 1 ? "content active-content" : "content"}>All</h2>
-                            <h2 className={toggleState === 2 ? "content active-content active2" : "content"}>Pizza</h2>
-                            <h2 className={toggleState === 3 ? "content active-content active2" : "content"}>Bread</h2>
-                            <h2 className={toggleState === 4 ? "content active-content active2" : "content"}>Shakes</h2>
-                            <h2 className={toggleState === 5 ? "content active-content active2" : "content"}>Ice Creams</h2>
-                            <h2 className={toggleState === 6 ? "content active-content active2" : "content"}>Cakes</h2>
-                            <h2 className={toggleState === 7 ? "content active-content" : "content"}>Juices</h2>
+                                {/* <h2 className={toggleState === 1 ? "content active-content" : "content"}>All</h2>
+                                <h2 className={toggleState === 2 ? "content active-content active2" : "content"}>Pizza</h2>
+                                <h2 className={toggleState === 3 ? "content active-content active2" : "content"}>Bread</h2>
+                                <h2 className={toggleState === 4 ? "content active-content active2" : "content"}>Shakes</h2>
+                                <h2 className={toggleState === 5 ? "content active-content active2" : "content"}>Ice Creams</h2>
+                                <h2 className={toggleState === 6 ? "content active-content active2" : "content"}>Cakes</h2>
+                                <h2 className={toggleState === 7 ? "content active-content" : "content"}>Juices</h2> */}
+
+                            <div className='items'>
                             {/* {filteredData.map(item => */}
                             {/* .filter(item=>item.Name.toLowerCase().includes(search.toLowerCase())) */}
                                 {/* {data.map(item => */}
                                 
                                 {filteredData.filter(item=>item.Name.toLowerCase().includes(search.toLowerCase())).map(item=>
                                     <div>
-                                        <div className='items' key={item.id}>
+                                        <div className='itemslist' key={item.id}>
                                             <ul>
                                                 <li className={item.Type === 'veg' ? 'veg' : 'non-veg'}></li>
                                                 <li>{item.Name}</li>
@@ -192,11 +151,11 @@ const Menu = () => {
                         (<div className='loading'>Loading...</div>)
                 }
             </div>
-            <div className='space'></div>
-        </div> 
-    </div>
 
-    </>
+            </div>
+            <div className='rescart'></div>
+        </div>
+    </div>
   )
 }
 
