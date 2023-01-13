@@ -107,8 +107,6 @@ nav ul li a img{
 .rescategory{
     width: 18%;
     height: auto;
-    /* position: relative; */
-    /* border-right: 1px solid #d9d9d9; */
 }
 
 .rescategory h3{
@@ -118,7 +116,6 @@ nav ul li a img{
 
 .rescategory ul{
     text-align: right;
-    /* margin-right: 40px; */
     margin-top: 20px;
     position: sticky;
     top: 220px;
@@ -149,7 +146,7 @@ nav ul li a img{
     text-align: center;
   }
 .box input{
-    width: 400px;
+    width: 100%;
     height: 40px;
     color: #0170c1;
     font-size: 15px;
@@ -224,6 +221,7 @@ nav ul li a img{
     position: relative;
     float: right;
     margin-top: -80px;
+    border-radius: 5px;
   }
 
   .non-veg{
@@ -258,7 +256,7 @@ nav ul li a img{
 
 
 
-@media (max-width: 400px){
+@media (max-width: 425px){
     nav{
         background-color: white;
         width: 100%;
@@ -357,7 +355,7 @@ nav ul li a img{
         top: -5px;
     }
 
-    .hscroll{
+    /* .hscroll{
         height: 55px;
         background-color: white;
         overflow: auto;
@@ -380,7 +378,6 @@ nav ul li a img{
   
       .hscroll ul li{
         display: inline-block;
-        /* color: black; */
         text-align: center;
         padding: 3px 10px;
         margin: 0px 10px;
@@ -392,27 +389,80 @@ nav ul li a img{
       .clicked{
         color: white;
         background-color: #0170c1;
-      }
+      } */
 
       .box{
         display: none;
       }
 
-      .rescategory{
+      /* .rescategory{
         display: none;
-      }
+      } */
+
+      .resinfo2{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .rescategory{
+        width: 100%;
+        height: auto;
+        background-color: white;
+        border-bottom: 1px solid #d9d9d9;
+        overflow: auto;
+        white-space: nowrap;
+        position: sticky;
+        top: 100px;
+        z-index: 1;
+    }
+    
+    .rescategory ul{
+        /* text-align: right; */
+        margin-top: 0px;
+        /* position: sticky; */
+        /* top: 220px; */
+        margin: 10px;
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+    }
+    
+    .rescategory ul .tabs{
+        margin-right: 20px;
+    }
+
+    .rescategory ul li{
+        padding: 5px 15px;
+        cursor: pointer;
+        font-size: 15px;
+        border: 1px solid #0170c1;
+        border-radius: 20px;
+    }
+    
+    .rescategory ul li.active{
+        color: white;
+        background-color: #0170c1;
+        border-radius: 20px;
+        font-size: 15px;
+        /* font-weight: bold; */
+        padding:5px 15px;
+    }
+
 
       .resitems{
         width: 100%;
         height: auto;
         border-right: 1px solid #d9d9d9;
         border-left: 1px solid #d9d9d9;
+        margin-bottom: 50px;
     }
 
     .checkbox{
         width: 100px;
-        float: right;
-        margin-right: 20px;
+        float: left;
+        margin-left: 45px;
         margin-top: 15px;
     }
 
@@ -473,9 +523,67 @@ nav ul li a img{
 
 }
 
-@media(min-width:500px){
+@media(max-width:1280px){
+    .box{
+        padding: 1px;
+    }
+
+    .box input{
+        width: 100%;
+    }
+}
+
+/* @media(min-width:500px){
     .hscroll{
         display: none;
     }
-}
+} */
+
+/* @media(max-width:1367px){
+    .box{
+        margin: 25px 60px 0;
+        display: block;
+        text-align: center;
+      }
+    .box input{
+        width: 345px;
+        height: 40px;
+        color: #0170c1;
+        font-size: 15px;
+      }
+    
+     .box img{
+        width: 30px;
+        height: 30px;
+        position: relative;
+        float: right;
+        top: -35px;
+        right: 0px;
+        border-left: 1px solid black;
+      }
+} */
+
+/* @media(max-width:1921px){
+    .box{
+        margin: 25px 63px 0;
+        display: block;
+        text-align: center;
+      }
+    .box input{
+        width: 530px;
+        height: 40px;
+        color: #0170c1;
+        font-size: 15px;
+      }
+    
+     .box img{
+        width: 30px;
+        height: 30px;
+        position: relative;
+        float: right;
+        top: -35px;
+        right: 0px;
+        border-left: 1px solid black;
+      }
+} */
 

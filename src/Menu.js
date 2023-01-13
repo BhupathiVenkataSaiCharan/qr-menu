@@ -71,7 +71,7 @@ const Menu = () => {
                 </ul>
             </div>
         </div>
-        <div className='hscroll'>
+        {/* <div className='hscroll'>
                 <ul>
                     <li className={toggleState === 1 ? "tabs clicked" : "tabs"} onClick={()=>{toggleTab(1); setData(mainArray)}}>All</li>
                     <li className={toggleState === 2 ? "tabs clicked" : "tabs"} onClick={()=>{toggleTab(2, "Pizza")}}>Pizza</li>
@@ -81,7 +81,7 @@ const Menu = () => {
                     <li className={toggleState === 6 ? "tabs clicked" : "tabs"} onClick={()=>{toggleTab(6, "Cakes")}}>Cakes</li>
                     <li className={toggleState === 7 ? "tabs clicked" : "tabs"} onClick={()=>{toggleTab(7, "Juices")}}>Juices</li>
                 </ul>
-            </div>
+        </div> */}
         <div className='resinfo2'>
             <div className='rescategory'>
                 {/* <h3>Categories</h3> */}
