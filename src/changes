@@ -1,0 +1,34 @@
+Appication order :
+
+->index.js
+
+->App.js >>>> It has all the routes and routing necessary for the application.
+
+-> first route is Qr.js for scanning
+
+-> second route is Menu.js from the main application.
+
+->Menu.js has the application which has following functionalities.
+    -> sticky header
+    -> sticky category menu
+    -> dynamic category menu from API
+    -> dynamic left menu with toggle and filter items menu
+    -> dynamic items menu
+    -> search among items menu
+
+<!-- -> Menu1 has the old code of using the static left menu for filtering data. -->
+
+<!-- -> Dummy API used for menu https://63b6952d1907f863aafa9342.mockapi.io/menu/ -->
+
+<!-- ->Api.js is used to check the data coming from dummy API. -->
+
+
+
+
+<!-- Extra files in application: -->
+
+<!-- ->DMenu.js has demo of using 2 function for onClick. -->
+
+<!-- -> Stack.js is used to work on the code regarding the updates and doubts clarified from stackoverflow. -->
+
+<!-- ->itemlist.json is used to regularly update the mockApi i'm using from https://mockapi.io/projects/63b6952d1907f863aafa9343 ===== this is in venkatasaicharanbhupathi@gmail.com account in mockAPI. -->
