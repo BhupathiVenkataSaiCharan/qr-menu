@@ -187,5 +187,12 @@
    "Type": "veg",
    "Price": 50,
    "id": "27"
+  },
+  {
+   "Name": "Chicken Burger",
+   "Category": "Burgers",
+   "Type": "veg",
+   "Price": 50,
+   "id": "28"
   }
  ]
